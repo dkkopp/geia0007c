@@ -1,0 +1,3062 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 (http://www.altova.com) by jonathan.mayes1 (USAMC Logistics Support Activity) -->
+<!--
+Last Updated: 2024
+Last Updated by: Scot Motquin
+Last Updated: 03 Oct 24
+Author: SAE International
+Description: Defines all data types referenced by the elements in GEIA_STD_0007_C.xsd
+-->
+<xsd:schema xmlns="http://www.sae.org/geia_std_0007/2018/RevC/types" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:altova="http://www.altova.com/xml-schema-extensions" targetNamespace="http://www.sae.org/geia_std_0007/2018/RevC/types" elementFormDefault="qualified">
+	<xsd:simpleType name="achieved_availability_Type" id="DTN_1010">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99.999999"/>
+			<xsd:fractionDigits value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="acquisition_decision_office_Type" id="DTN_1020">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="acquisition_method_code_Type" id="DTN_1030">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="acquisition_method_suffix_code_Type" id="DTN_1040">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="activity_name_location_Type" id="DTN_1050">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="50"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="adapter_interconnector_device_required_Type" id="DTN_1060">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="additional_reference_number_Type" id="DTN_1070">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="32"/>
+			<xsd:pattern value="\P{Ll}*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="additional_requirements_Type" id="DTN_1080">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="administrative_and_logistics_delay_time_Type" id="DTN_1090">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="administrative_lead_time_Type" id="DTN_1100">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="allocation_designation_description_Type" id="DTN_1110">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="INVRECORD"/>
+			<xsd:pattern value="NOTAPPLIC"/>
+			<xsd:pattern value="PERCRACRW"/>
+			<xsd:pattern value="PER[0-9]{2}ACFT"/>
+			<xsd:pattern value="PER[0-9]{2}MISL"/>
+			<xsd:pattern value="PER[0-9]{2}ENGN"/>
+			<xsd:pattern value="PER[0-9]{2}LABS"/>
+			<xsd:pattern value="PER[0-9]{2}TRGT"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="allocation_extended_range_Type" id="DTN_1120">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="allocation_land_vessel_code_Type" id="DTN_1130">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="L"/>
+			<xsd:enumeration value="V"/>
+			<xsd:enumeration value="B"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="allocation_maintenance_level_function_Type" id="DTN_1140">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="O"/>
+			<xsd:enumeration value="OI"/>
+			<xsd:enumeration value="I"/>
+			<xsd:enumeration value="IW"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="I1"/>
+			<xsd:enumeration value="I2"/>
+			<xsd:enumeration value="T3"/>
+			<xsd:enumeration value="T"/>
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="H"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="allocation_range_Type" id="DTN_1150">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:maxInclusive value="450"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="allocation_station_identification_code_Type" id="DTN_1160">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="allowance_document_number_Type" id="DTN_1170">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="allowance_item_code_Type" id="DTN_1180">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="A[AC-F]"/>
+			<xsd:pattern value="B[1-9AC-HJNSTVWXZ]"/>
+			<xsd:pattern value="C[ACDEMPRSTVYZ]"/>
+			<xsd:pattern value="D[\p{Lu}\p{Nd}]"/>
+			<xsd:pattern value="E[ACDE]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="allowance_item_quantity_Type" id="DTN_1190">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="alternate_logistics_support_analysis_control_number_code_Type" id="DTN_1200">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="2"/>
+			<xsd:pattern value="[\p{Lu}\p{Nd}]+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="annual_man_hours_Type" id="DTN_1210">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99999.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="annual_number_of_missions_Type" id="DTN_1220">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="annual_operating_days_Type" id="DTN_1230">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="366"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="annual_operating_requirement_Type" id="DTN_1240">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="annual_operating_time_Type" id="DTN_1250">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="8784"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="armed_services_vocational_aptitude_battery_aptitude_element_Type" id="DTN_1260">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="armed_services_vocational_aptitude_battery_expected_range_Type" id="DTN_1270">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="armed_services_vocational_aptitude_battery_lowest_percent_Type" id="DTN_1280">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="armed_services_vocational_aptitude_battery_test_score_Type" id="DTN_1290">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="authorized_quantity_Type" id="DTN_1300">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="automatic_data_processing_equipment_code_Type" id="DTN_1310">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="available_man_hour_Type" id="DTN_1320">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="available_quantity_Type" id="DTN_1330">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="axle_length_Type" id="DTN_1340">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxExclusive value="1000.0"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="breakdown_element_identifier_Type" id="DTN_1343">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="128"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="breakdown_element_identifier_description_Type" id="DTN_1344">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="breakdown_element_identifier_name_Type" id="DTN_1345">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="64"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="breakdown_element_identifier_type_Type" id="DTN_1346">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="built_in_test_cannot_duplicate_percentage_Type" id="DTN_1350">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="built_in_test_detectability_level_percentage_Type" id="DTN_1360">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="built_in_test_retest_ok_percent_Type" id="DTN_1370">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="calibration_interval_Type" id="DTN_1380">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="calibration_item_Type" id="DTN_1390">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="calibration_measurement_requirement_recommended_code_Type" id="DTN_1400">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="calibration_measurement_requirement_summary_parameter_code_Type" id="DTN_1410">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="calibration_measurement_requirement_summary_recommended_Type" id="DTN_1420">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="calibration_measurement_requirement_summary_status_Type" id="DTN_1430">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="calibration_procedure_Type" id="DTN_1440">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="20"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="calibration_required_Type" id="DTN_1450">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="calibration_standard_Type" id="DTN_1460">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="calibration_time_Type" id="DTN_1470">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0"/>
+			<xsd:maxInclusive value="9999.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="caption_Type" id="DTN_1480">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="255"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="caution_warning_note_identifier_Type" id="DTN_1483">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[A-Z0-9]{0,5}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="caution_warning_note_title_Type" id="DTN_1487">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="36"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="change_authority_number_Type" id="DTN_1490">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="chemical_use_Type" id="DTN_1494">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="circuit_breaker_group_number_Type" id="DTN_1491">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="9999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="circuit_breaker_identification_code_Type" id="DTN_1492">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="circuit_breaker_objective_state_Type" id="DTN_1496">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="open"/>
+			<xsd:enumeration value="close"/>
+			<xsd:enumeration value="verify_open"/>
+			<xsd:enumeration value="verify_closed"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="circuit_breaker_sequence_number_Type" id="DTN_1497">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="circuit_breaker_type_Type" id="DTN_1498">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="electronic_circuit_breaker"/>
+			<xsd:enumeration value="electromechanical_circuit_breaker"/>
+			<xsd:enumeration value="dummy_circuit_breaker"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="cleaning_and_drying_procedures_Type" id="DTN_1500">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="commercial_and_government_entity_city_Type" id="DTN_1510">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="20"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="commercial_and_government_entity_code_Type" id="DTN_1520">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="commercial_and_government_entity_name_Type" id="DTN_1530">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="25"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="commercial_and_government_entity_nation_Type" id="DTN_1540">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="20"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="commercial_and_government_entity_postal_zone_Type" id="DTN_1550">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="commercial_and_government_entity_state_Type" id="DTN_1560">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="2"/>
+			<xsd:pattern value="[A-Z]+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="commercial_and_government_entity_street_Type" id="DTN_1570">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="25"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="common_name_Type" id="DTN_1575">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="32"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="common_unit_under_test_Type" id="DTN_1580">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="contact_team_delay_time_Type" id="DTN_1590">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="container_length_Type" id="DTN_1600">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="container_national_stock_number_Type" id="DTN_1610">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="20"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="container_type_Type" id="DTN_1620">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="36"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="contract_number_Type" id="DTN_1630">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="19"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="contractor_furnished_equipment_government_furnished_equipment_Type" id="DTN_1640">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="G"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="contractor_technical_information_code_Type" id="DTN_1650">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="2"/>
+			<xsd:pattern value="[A-F][BCGKMNPVY]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="control_Type" id="DTN_1660">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+			<xsd:pattern value="[1-9]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="conversion_factor_Type" id="DTN_1670">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="1.0"/>
+			<xsd:fractionDigits value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="cost_per_reorder_action_Type" id="DTN_1680">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="cost_per_requisition_Type" id="DTN_1690">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="cost_Type" id="DTN_1700">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="crest_angle_Type" id="DTN_1710">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="90"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="crew_size_Type" id="DTN_1720">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="9999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="critical_item_code_Type" id="DTN_1730">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="3"/>
+			<xsd:maxLength value="13"/>
+			<xsd:pattern value="[PMB](CA|CO|FD|FS|LL|PQ|SQ)+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="criticality_code_Type" id="DTN_1740">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="currency_code_Type" id="DTN_1745">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="3"/>
+			<xsd:pattern value="[A-Z]+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="cushioning_and_dunnage_material_Type" id="DTN_1750">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="cushioning_thickness_Type" id="DTN_1760">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="custody_code_Type" id="DTN_1770">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="P"/>
+			<xsd:enumeration value="L"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="N"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="data_status_code_Type" id="DTN_1780">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="G"/>
+			<xsd:enumeration value="R"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="date_Type" id="DTN_1790">
+		<xsd:restriction base="xsd:date"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="defense_logistics_information_service_screening_requirement_code_Type" id="DTN_1800">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="delivery_schedule_Type" id="DTN_1810">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="demilitarization_code_Type" id="DTN_1820">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="demilitarization_cost_Type" id="DTN_1830">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="design_data_category_code_contractor_recommended_Type" id="DTN_1840">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="design_data_category_code_government_required_Type" id="DTN_1850">
+		<xsd:restriction base="xsd:boolean">
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="design_data_category_code_scope_Type" id="DTN_1860">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="40"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="design_data_category_code_Type" id="DTN_1870">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="G"/>
+			<xsd:enumeration value="H"/>
+			<xsd:enumeration value="I"/>
+			<xsd:enumeration value="J"/>
+			<xsd:enumeration value="K"/>
+			<xsd:enumeration value="L"/>
+			<xsd:enumeration value="M"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="designated_rework_point_Type" id="DTN_1880">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="disassembly_code_Type" id="DTN_1890">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="2"/>
+			<xsd:pattern value="[A-HJ-NP-Z0-9]+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="discount_rate_Type" id="DTN_1900">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="9.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="document_availability_code_Type" id="DTN_1910">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="document_code_Type" id="DTN_1920">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="document_file_extension_Type" id="DTN_1930">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="32"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="document_id_Type" id="DTN_1940">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="56"/>
+			<xsd:pattern value="[\p{Lu}\p{Nd}\-—–-]*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="document_identifier_code_Type" id="DTN_1950">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="drawing_classification_Type" id="DTN_1960">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[A-J][1-3][YN]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="drawing_number_Type" id="DTN_1970">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="32"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="drawing_Type" id="DTN_1980">
+		<xsd:restriction base="xsd:base64Binary"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="duty_code_Type" id="DTN_1990">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="duty_position_requiring_a_new_or_revised_skill_Type" id="DTN_2000">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="19"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="duty_Type" id="DTN_2010">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="240"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="economic_analysis_Type" id="DTN_2020">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="element_indicator_Type" id="DTN_2030">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="end_item_acronym_code_Type" id="DTN_2040">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+			<xsd:pattern value="[\p{Lu}\p{Nd}]*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="end_item_range_Type" id="DTN_2050">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="8"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="engineering_failure_mode_mean_time_between_failure_Type" id="DTN_2060">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="environmental_handling_and_transportation_indicator_Type" id="DTN_2070">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="essentiality_code_Type" id="DTN_2080">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="3"/>
+			<xsd:enumeration value="5"/>
+			<xsd:enumeration value="6"/>
+			<xsd:enumeration value="7"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="estimated_salvage_value_Type" id="DTN_2090">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="event_trigger_Type" id="DTN_2095">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="external_or_internal_load_indicator_Type" id="DTN_2100">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="facility_area_Type" id="DTN_2110">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="facility_category_code_Type" id="DTN_2120">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="6"/>
+			<xsd:pattern value="\p{Nd}*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="facility_class_Type" id="DTN_2130">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="19"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="facility_name_Type" id="DTN_2140">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="32"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="facility_requirement_code_Type" id="DTN_2150">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="facility_type_Type" id="DTN_2160">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="failure_effect_probability_Type" id="DTN_2170">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="1.0"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="failure_mode_classification_Type" id="DTN_2180">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="T"/>
+			<xsd:enumeration value="O"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="failure_mode_criticality_number_Type" id="DTN_2190">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="failure_mode_indicator_Type" id="DTN_2200">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="4"/>
+			<xsd:pattern value="[FD][\p{Lu}\p{Nd}]+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="failure_mode_ratio_Type" id="DTN_2210">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="1.0"/>
+			<xsd:fractionDigits value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="failure_probability_level_Type" id="DTN_2220">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="F"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="failure_rate_data_source_Type" id="DTN_2230">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="32"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="failure_rate_Type" id="DTN_2240">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="family_group_Type" id="DTN_2250">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="fault_isolation_ambiguity_group_Type" id="DTN_2260">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="fault_isolation_percent_failure_Type" id="DTN_2270">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="federal_supply_classification_Type" id="DTN_2280">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="4"/>
+			<xsd:pattern value="\p{Nd}+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="figure_number_Type" id="DTN_2290">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="fiscal_year_Type" id="DTN_2300">
+		<xsd:restriction base="xsd:gYear"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="freight_classification_Type" id="DTN_2310">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="7"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="generic_code_Type" id="DTN_2320">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="government_designator_Type" id="DTN_2330">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="20"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="graphic_source_identification_Type" id="DTN_2340">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="47"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="hardness_critical_item_Type" id="DTN_2350">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="hardness_critical_procedure_code_Type" id="DTN_2360">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Y"/>
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="N"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="hazardous_code_Type" id="DTN_2370">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="hazardous_maintenance_procedure_code_Type" id="DTN_2380">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="hazardous_materials_storage_cost_Type" id="DTN_2390">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="hazardous_materials_target_list_category_Type" id="DTN_2382">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="32"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="hazardous_waste_disposal_cost_Type" id="DTN_2400">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="hazardous_waste_storage_cost_Type" id="DTN_2410">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="helicopter_mission_altitude_Type" id="DTN_2420">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="helicopter_mission_distance_Type" id="DTN_2430">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="helicopter_mission_payload_Type" id="DTN_2440">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="helicopter_mission_temperature_Type" id="DTN_2450">
+		<xsd:restriction base="xsd:integer">
+			<xsd:minInclusive value="-460"/>
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="helicopter_mission_time_Type" id="DTN_2460">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="highway_model_load_Type" id="DTN_2470">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="highway_transportation_type_Type" id="DTN_2475">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="highway_transporter_model_type_Type" id="DTN_2480">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="19"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="holding_cost_percentage_Type" id="DTN_2490">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="hour_labor_rate_Type" id="DTN_2500">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="identification_number_Type" id="DTN_2510">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="19"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="indenture_code_Type" id="DTN_2520">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+			<xsd:pattern value="[\p{Lu}\*]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="industrial_materials_analysis_of_capacity_Type" id="DTN_2530">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="19"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="information_code_Type" id="DTN_2540">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="information_code_variant_Type" id="DTN_2550">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="inherent_availability_Type" id="DTN_2560">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99.999999"/>
+			<xsd:fractionDigits value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="inherent_maintenance_factor_Type" id="DTN_2570">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="9.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="initial_bin_cost_Type" id="DTN_2580">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="9999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="initial_cataloging_cost_Type" id="DTN_2590">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="9999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="input_power_source_ac_dc_Type" id="DTN_2600">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="D"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="input_power_source_frequency_range_Type" id="DTN_2610">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="input_power_source_operating_range_Type" id="DTN_2620">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="input_power_source_percent_maximum_ripple_Type" id="DTN_2630">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="input_power_source_phase_Type" id="DTN_2640">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:maxInclusive value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="input_power_source_watts_Type" id="DTN_2650">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="integrated_logistics_support_requirement_category_code_Type" id="DTN_2660">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="G"/>
+			<xsd:enumeration value="H"/>
+			<xsd:enumeration value="I"/>
+			<xsd:enumeration value="J"/>
+			<xsd:enumeration value="K"/>
+			<xsd:enumeration value="L"/>
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="N"/>
+			<xsd:enumeration value="O"/>
+			<xsd:enumeration value="P"/>
+			<xsd:enumeration value="Q"/>
+			<xsd:enumeration value="R"/>
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="T"/>
+			<xsd:enumeration value="U"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="item_description_Type" id="DTN_4415">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="interchangeability_code_Type" id="DTN_2670">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="OW"/>
+			<xsd:enumeration value="OR"/>
+			<xsd:enumeration value="TW"/>
+			<xsd:enumeration value="NI"/>
+			<xsd:enumeration value="NR"/>
+			<xsd:enumeration value="OM"/>
+			<xsd:enumeration value="TM"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="interest_rate_Type" id="DTN_2680">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="9.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="intermediate_container_code_Type" id="DTN_2690">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="intermediate_container_quantity_Type" id="DTN_2700">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="interoperable_item_number_type_Type" id="DTN_2710">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="I"/>
+			<xsd:enumeration value="M"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="issuing_authority_Type" id="DTN_2717">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="32"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="issue_number_Type" id="DTN_2715">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="inventory_storage_space_cost_Type" id="DTN_2720">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:maxInclusive value="99.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="item_category_code_Type" id="DTN_2730">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="7"/>
+			<xsd:enumeration value="8"/>
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="H"/>
+			<xsd:enumeration value="4"/>
+			<xsd:enumeration value="5"/>
+			<xsd:enumeration value="6"/>
+			<xsd:enumeration value="2"/>
+			<xsd:enumeration value="G"/>
+			<xsd:enumeration value="N"/>
+			<xsd:enumeration value="P"/>
+			<xsd:enumeration value="R"/>
+			<xsd:enumeration value="3"/>
+			<xsd:enumeration value="Q"/>
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="T"/>
+			<xsd:enumeration value="W"/>
+			<xsd:enumeration value="X"/>
+			<xsd:enumeration value="Y"/>
+			<xsd:enumeration value="Z"/>
+			<xsd:enumeration value="9"/>
+			<xsd:enumeration value="V"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="J"/>
+			<xsd:enumeration value="K"/>
+			<xsd:enumeration value="L"/>
+			<xsd:enumeration value="U"/>
+			<xsd:enumeration value="AA"/>
+			<xsd:enumeration value="AB"/>
+			<xsd:enumeration value="AC"/>
+			<xsd:enumeration value="AD"/>
+			<xsd:enumeration value="AE"/>
+			<xsd:enumeration value="AF"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="item_class_of_supply_Type" id="DTN_2735">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="item_criticality_number_Type" id="DTN_2740">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="item_designator_code_Type" id="DTN_2750">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="26"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="item_function_identifier_Type" id="DTN_2755">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="item_location_code_Type" id="DTN_2760">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="T"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="item_management_code_Type" id="DTN_2770">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="item_name_code_Type" id="DTN_2780">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="item_name_Type" id="DTN_2790">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="19"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="item_number_Type" id="DTN_2800">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="item_subclass_Type" id="DTN_2805">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="job_code_Type" id="DTN_2810">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="job_Type" id="DTN_2820">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="40"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="julian_date_Type" id="DTN_2830">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:maxInclusive value="99366"/>
+			<xsd:pattern value="[0-9]{2}00[1-9]"/>
+			<xsd:pattern value="[0-9]{2}0[1-9][0-9]"/>
+			<xsd:pattern value="[0-9]{2}[1-2][0-9]{2}"/>
+			<xsd:pattern value="[0-9]{2}3[0-5][0-9]"/>
+			<xsd:pattern value="[0-9]{2}36[0-6]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="label_Type" id="DTN_2835">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="36"/>
+		</xsd:restriction>
+		<!--Added for Rev C for Figure Number Label and Item Number Label-->
+	</xsd:simpleType>
+	<xsd:simpleType name="labor_rate_Type" id="DTN_2840">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:maxInclusive value="99.99"/>
+			<xsd:fractionDigits value="2"/>
+			<xsd:minInclusive value="0.0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="life_cycle_status_Type" id="DTN_2850">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="P"/>
+			<xsd:enumeration value="S"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="life_span_Type" id="DTN_2860">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="line_item_number_Type" id="DTN_2870">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="line_replaceable_unit_Type" id="DTN_2880">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="linear_measure_Type" id="DTN_2890">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="999.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="list_substance_identification_Type" id="DTN_2892">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="19"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="list_substance_name_Type" id="DTN_2894">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="32"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="loading_factor_Type" id="DTN_2900">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="9.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="logistics_considerations_Type" id="DTN_2910">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="logistics_control_code_Type" id="DTN_2920">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="N"/>
+			<xsd:enumeration value="O"/>
+			<xsd:enumeration value="R"/>
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="T"/>
+			<xsd:enumeration value="U"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="logistics_decision_office_Type" id="DTN_2930">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="logistics_support_analysis_control_number_indenture_code_Type" id="DTN_2940">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="logistics_support_analysis_control_number_structure_Type" id="DTN_2960">
+		<xsd:restriction base="xsd:integer">
+			<xsd:pattern value="[0-9]{0,18}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="logistics_support_analysis_control_number_Type" id="DTN_2970">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="18"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="logistics_support_analysis_control_number_description_Type" id="DTN_2975">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="130"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="logistics_support_analysis_control_number_type_Type" id="DTN_2980">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="P"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="logistics_support_analysis_recommendation_code_Type" id="DTN_2990">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="lot_quantity_Type" id="DTN_3000">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="maintenance_action_code_Type" id="DTN_3010">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="R"/>
+			<xsd:enumeration value="T"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="maintenance_group_identifier_Type" id="DTN_3015">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="32"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="maintenance_interval_Type" id="DTN_3020">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="maintenance_plan_number_Type" id="DTN_3030">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="23"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="maintenance_procedure_identifier_Type" id="DTN_3040">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="maintenance_procedure_title_Type" id="DTN_3050">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="36"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="maintenance_replacement_rate_i_Type" id="DTN_3060">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="9999.9999"/>
+			<xsd:fractionDigits value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="maintenance_replacement_rate_ii_Type" id="DTN_3070">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99999.999"/>
+			<xsd:fractionDigits value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="maintenance_replacement_rate_modifier_Type" id="DTN_3080">
+		<xsd:restriction base="xsd:string">
+			<xsd:minLength value="6"/>
+			<xsd:maxLength value="7"/>
+			<xsd:pattern value="[A-C0-9]{6}W*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="maintenance_task_distribution_Type" id="DTN_3090">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="management_plan_Type" id="DTN_3100">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="managing_command_agency_Type" id="DTN_3110">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="man_hour_per_operating_hour_Type" id="DTN_3120">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="999.99999"/>
+			<xsd:fractionDigits value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="material_leadtime_Type" id="DTN_3130">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="material_weight_Type" id="DTN_3140">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="999.999"/>
+			<xsd:fractionDigits value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="material_Type" id="DTN_3150">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="240"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="maximum_allowable_operating_time_Type" id="DTN_3160">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="4"/>
+			<xsd:pattern value="[0-9]{2}[\sXCM][ACHMRSLDTUY]"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="maximum_time_to_repair_Type" id="DTN_3170">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="999.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="maximum_unit_pack_cube_Type" id="DTN_3180">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="1000000.0"/>
+			<xsd:fractionDigits value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="maximum_unit_pack_weight_Type" id="DTN_3190">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="9999000"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_active_maintenance_downtime_Type" id="DTN_3200">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99999.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_elapsed_time_Type" id="DTN_3210">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="999.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_man_hours_Type" id="DTN_3220">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="999.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_man_minutes_Type" id="DTN_3230">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="9999.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_minute_elapsed_time_Type" id="DTN_3240">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="9999.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_mission_duration_Type" id="DTN_3250">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99999.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_time_between_effective_function_failures_Type" id="DTN_3260">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_time_between_failures_Type" id="DTN_3270">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_time_between_maintenance_actions_Type" id="DTN_3280">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_time_between_maintenance_induced_Type" id="DTN_3290">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_time_between_maintenance_inherent_Type" id="DTN_3300">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_time_between_maintenance_no_defect_Type" id="DTN_3310">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_time_between_noneffective_function_failures_Type" id="DTN_3320">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_time_between_preventive_maintenance_Type" id="DTN_3330">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_time_between_removals_Type" id="DTN_3340">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_time_between_system_aborts_Type" id="DTN_3350">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="mean_time_to_repair_Type" id="DTN_3360">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.00"/>
+			<xsd:maxExclusive value="1000.00"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="means_of_detection_Type" id="DTN_3370">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="N"/>
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="P"/>
+			<xsd:enumeration value="H"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="measurement_base_Type" id="DTN_3380">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="G"/>
+			<xsd:enumeration value="H"/>
+			<xsd:enumeration value="K"/>
+			<xsd:enumeration value="L"/>
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="O"/>
+			<xsd:enumeration value="R"/>
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="T"/>
+			<xsd:enumeration value="U"/>
+			<xsd:enumeration value="Y"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="B"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="method_of_preservation_code_Type" id="DTN_3390">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="military_load_classification_Type" id="DTN_3400">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="military_packing_code_Type" id="DTN_3410">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="military_unit_type_Type" id="DTN_3420">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="240"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="minimal_packing_code_Type" id="DTN_3430">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="minimum_equipment_list_indicator_Type" id="DTN_3440">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="minimum_replacement_unit_Type" id="DTN_3450">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="mission_phase_code_Type" id="DTN_3460">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+			<xsd:pattern value="[\p{Lu}\p{Nd}\*]+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="mission_phase_operational_mode_Type" id="DTN_3470">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="mobile_facility_code_Type" id="DTN_3480">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="V"/>
+			<xsd:enumeration value="X"/>
+			<xsd:enumeration value="N"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="mobility_type_Type" id="DTN_3490">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="modification_or_change_Type" id="DTN_3500">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="narrative_Type" id="DTN_3510">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="national_item_identification_number_Type" id="DTN_3520">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="national_stock_number_activity_code_Type" id="DTN_3530">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="national_stock_number_cognizance_code_Type" id="DTN_3540">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="national_stock_number_materiel_control_code_Type" id="DTN_3550">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="national_stock_number_special_materiel_identification_code_materiel_management_aggregation_code_Type" id="DTN_3560">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="net_explosive_weight_Type" id="DTN_3570">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="9999999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="next_higher_assembly_provisioning_list_item_sequence_number_indicator_Type" id="DTN_3580">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="N"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="*"/>
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="E"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="logistics_support_analysis_control_number_nomenclature_Type" id="DTN_2950">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="42"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="nonoperational_fragility_factor_Type" id="DTN_3600">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="not_repairable_this_station_Type" id="DTN_3610">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="number_of_activities_Type" id="DTN_3620">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="number_of_shops_Type" id="DTN_3630">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="number_of_skids_Type" id="DTN_3640">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="number_of_systems_supported_Type" id="DTN_3650">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="number_operation_locations_Type" id="DTN_3660">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="9999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="objective_state_Type" id="DTN_3665">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="task_checked"/>
+			<xsd:enumeration value="jacked"/>
+			<xsd:enumeration value="unjacked"/>
+			<xsd:enumeration value="safety_device_established"/>
+			<xsd:enumeration value="electrical_power_established"/>
+			<xsd:enumeration value="electrical_power_from_engine_established"/>
+			<xsd:enumeration value="electrical_power_from_apu_established"/>
+			<xsd:enumeration value="external_electrical_power_established"/>
+			<xsd:enumeration value="internal_electrical_power_established"/>
+			<xsd:enumeration value="hydraulic_power_established"/>
+			<xsd:enumeration value="air_supply_established"/>
+			<xsd:enumeration value="fueled"/>
+			<xsd:enumeration value="defueled"/>
+			<xsd:enumeration value="water_supply_established"/>
+			<xsd:enumeration value="controls_status_established"/>
+			<xsd:enumeration value="controls_status_established"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="operating_units_Type" id="DTN_3670">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="9999.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+		<!--Name Changed for Rev C-->
+	</xsd:simpleType>
+	<xsd:simpleType name="operating_level_Type" id="DTN_3680">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="operation_life_Type" id="DTN_3690">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="operational_availability_Type" id="DTN_3700">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99.999999"/>
+			<xsd:fractionDigits value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="operational_requirement_indicator_Type" id="DTN_3710">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="W"/>
+			<xsd:enumeration value="P"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="operational_test_program_coordinated_test_plan_Type" id="DTN_3720">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="operational_test_program_standards_for_comparison_Type" id="DTN_3730">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="operational_weight_Type" id="DTN_3740">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="999.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="operations_and_maintenance_level_code_Type" id="DTN_3750">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="operators_manual_Type" id="DTN_3760">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="16"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="optional_procedures_indicator_Type" id="DTN_3770">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="organizational_level_Type" id="DTN_3780">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="F"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="overhaul_replacement_indicator_Type" id="DTN_3785">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Q"/>
+			<xsd:enumeration value="R"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="overhaul_replacement_rate_quantity_Type" id="DTN_3790">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="packaging_category_code_Type" id="DTN_3800">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="parameter_accuracy_Type" id="DTN_3810">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="26"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="parameter_group_code_Type" id="DTN_3820">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="2"/>
+			<xsd:pattern value="\p{Lu}+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="parameter_input_or_output_code_Type" id="DTN_3830">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="I"/>
+			<xsd:enumeration value="O"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="parameter_range_or_value_code_Type" id="DTN_3840">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="R"/>
+			<xsd:enumeration value="V"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="parameter_range_Type" id="DNT_3850">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="parameter_test_accuracy_ratio_Type" id="DTN_3860">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+			<xsd:enumeration value="3"/>
+			<xsd:enumeration value="4"/>
+			<xsd:enumeration value="5"/>
+			<xsd:enumeration value="6"/>
+			<xsd:enumeration value="7"/>
+			<xsd:enumeration value="8"/>
+			<xsd:enumeration value="9"/>
+			<xsd:enumeration value="0"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="parameter_Type" id="DTN_3870">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="12"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="percentile_Type" id="DTN_3880">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="person_identifier_Type" id="DTN_3890">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="personnel_turnover_rate_Type" id="DTN_3900">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="physical_security_pilferage_code_Type" id="DTN_3920">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="pilot_rework_overhaul_candidate_Type" id="DTN_3930">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Y"/>
+			<xsd:enumeration value="N"/>
+			<xsd:enumeration value="A"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="precious_metal_indicator_code_Type" id="DTN_3940">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="preparing_activity_Type" id="DTN_3950">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="25"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="preservation_material_code_Type" id="DTN_3960">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="preventive_maintenance_checks_and_services_indicator_code_Type" id="DTN_3970">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="price_concurrent_production_code_Type" id="DTN_3980">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="price_Type" id="DTN_3990">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99999999999.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="price_type_selection_Type" id="DTN_4000">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="I"/>
+			<xsd:enumeration value="M"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="procurement_quantity_Type" id="DTN_4010">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="production_lead_time_Type" id="DTN_4020">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="productivity_factor_Type" id="DTN_4030">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="9.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="program_element_Type" id="DTN_4040">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="3"/>
+			<xsd:pattern value="[\p{Lu}\p{Nd}]*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="program_parts_selection_list_Type" id="DTN_4050">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="N"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="program_support_inventory_control_point_Type" id="DTN_4060">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="proper_shipping_name_Type" id="DTN_4070">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="60"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="prorated_exhibit_line_item_number_Type" id="DTN_4080">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="prorated_quantity_Type" id="DTN_4090">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="provisioning_contract_control_number_Type" id="DTN_4100">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="provisioning_list_category_code_list_Type" id="DTN_4110">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="G"/>
+			<xsd:enumeration value="H"/>
+			<xsd:enumeration value="J"/>
+			<xsd:enumeration value="K"/>
+			<xsd:enumeration value="L"/>
+			<xsd:enumeration value="M"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="provisioning_list_item_sequence_number_Type" id="DTN_4120">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="5"/>
+			<xsd:pattern value="[\p{Lu}\p{Nd}]*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="provisioning_nomenclature_Type" id="DTN_4130">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="provisioning_price_used_code_Type" id="DTN_4140">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="provisioning_remarks_Type" id="DTN_4150">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="provisioning_system_identifier_code_Type" id="DTN_4160">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="provisioning_technical_documentation_Type" id="DTN_4170">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="quantity_per_activity_Type" id="DTN_4180">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="9999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="quantity_per_assembly_Type" id="DTN_4190">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="quantity_per_end_item_calculation_option_code_Type" id="DTN_4200">
+		<xsd:restriction base="xsd:integer">
+			<xsd:enumeration value="1"/>
+			<xsd:enumeration value="2"/>
+			<xsd:enumeration value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="quantity_per_end_item_Type" id="DTN_4210">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="quantity_per_figure_Type" id="DTN_4220">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="quantity_per_task_Type" id="DTN_4230">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="999.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="quantity_per_unit_pack_Type" id="DTN_4240">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="quantity_procured_Type" id="DTN_4250">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="quantity_shipped_Type" id="DTN_4260">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="rail_transportation_country_Type" id="DTN_4270">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="240"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="rail_use_Type" id="DTN_4280">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[CGABUN]{0,5}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="reason_for_supersedure_deletion_Type" id="DTN_4290">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A1"/>
+			<xsd:enumeration value="B1"/>
+			<xsd:enumeration value="B2"/>
+			<xsd:enumeration value="B3"/>
+			<xsd:enumeration value="B4"/>
+			<xsd:enumeration value="B5"/>
+			<xsd:enumeration value="B6"/>
+			<xsd:enumeration value="B7"/>
+			<xsd:enumeration value="C1"/>
+			<xsd:enumeration value="D1"/>
+			<xsd:enumeration value="F1"/>
+			<xsd:enumeration value="F2"/>
+			<xsd:enumeration value="F3"/>
+			<xsd:enumeration value="G1"/>
+			<xsd:enumeration value="H1"/>
+			<xsd:enumeration value="I1"/>
+			<xsd:enumeration value="J1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="recommended_civilian_grade_Type" id="DTN_4300">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="recommended_initial_system_stock_buy_Type" id="DTN_4310">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="recommended_military_rank_rate_Type" id="DTN_4320">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="C00"/>
+			<xsd:enumeration value="E01"/>
+			<xsd:enumeration value="E02"/>
+			<xsd:enumeration value="E03"/>
+			<xsd:enumeration value="E04"/>
+			<xsd:enumeration value="E05"/>
+			<xsd:enumeration value="E06"/>
+			<xsd:enumeration value="E07"/>
+			<xsd:enumeration value="E08"/>
+			<xsd:enumeration value="E09"/>
+			<xsd:enumeration value="W01"/>
+			<xsd:enumeration value="W02"/>
+			<xsd:enumeration value="W03"/>
+			<xsd:enumeration value="W04"/>
+			<xsd:enumeration value="W05"/>
+			<xsd:enumeration value="O01"/>
+			<xsd:enumeration value="O02"/>
+			<xsd:enumeration value="O03"/>
+			<xsd:enumeration value="O04"/>
+			<xsd:enumeration value="O05"/>
+			<xsd:enumeration value="O06"/>
+			<xsd:enumeration value="O07"/>
+			<xsd:enumeration value="O08"/>
+			<xsd:enumeration value="O09"/>
+			<xsd:enumeration value="O10"/>
+			<xsd:enumeration value="O11"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="recommended_minimum_system_stock_level_Type" id="DTN_4330">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="recommended_tender_load_list_quantity_Type" id="DTN_4340">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="recurring_bin_cost_Type" id="DTN_4350">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="9999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="recurring_cataloging_cost_Type" id="DTN_4360">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="9999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="reference_designation_code_Type" id="DTN_4370">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="U"/>
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="Z"/>
+			<xsd:enumeration value="H"/>
+			<xsd:enumeration value="T"/>
+			<xsd:enumeration value="R"/>
+			<xsd:enumeration value="S"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="reference_designation_Type" id="DTN_4380">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="64"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="reference_number_category_code_Type" id="DTN_4390">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="reference_number_Type" id="DTN_4400">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="32"/>
+			<xsd:pattern value="\P{Ll}*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="reference_number_variation_code_Type" id="DTN_4410">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="relationship_Type" id="DTN_4413">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="P"/>
+			<xsd:enumeration value="C"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="reliability_availability_and_maintainability_indicator_code_Type" id="DTN_4420">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="P"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="reliability_availability_and_maintainability_indicator_Type" id="DTN_4430">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="reliability_centered_maintenance_disposition_Type" id="DTN_4440">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="reliability_centered_maintenance_logic_number_Type" id="DTN_4443">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="reliability_centered_maintenance_logic_question_sequence_identifier_Type" id="DTN_4446">
+		<xsd:restriction base="xsd:integer">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="reliability_centered_maintenance_logic_result_Type" id="DTN_4450">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="reliability_centered_maintenance_logic_type_Type" id="DTN_4455">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Q"/>
+			<xsd:enumeration value="D"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="reliability_centered_maintenance_logic_utilized_Type" id="DTN_4460">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="32"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="reliability_centered_maintenance_logic_utilized_identifier_Type" id="DTN_4465">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="remain_in_place_indicator_Type" id="DTN_4470">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="N"/>
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="P"/>
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="V"/>
+			<xsd:enumeration value="X"/>
+			<xsd:enumeration value="C"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="repair_cycle_time_Type" id="DTN_4480">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="repair_survival_rate_Type" id="DTN_4490">
+		<xsd:restriction base="xsd:integer">
+			<xsd:maxInclusive value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="repair_work_space_cost_Type" id="DTN_4500">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="replaced_or_superseding_provisioning_list_item_sequence_number_indicator_Type" id="DTN_4510">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="R"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="replaced_or_superseding_provisioning_list_item_sequence_number_Type" id="DTN_4520">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="replacement_task_distribution_Type" id="DTN_4530">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="100"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="reportable_item_control_code_Type" id="DTN_4540">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="required_days_of_stock_Type" id="DTN_4550">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="retail_stockage_criteria_Type" id="DTN_4560">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="revision_date_Type" id="DTN_4570">
+		<xsd:restriction base="xsd:date"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="revision_Type" id="DTN_4580">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+			<xsd:pattern value="\p{Lu}*"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="revolving_assets_Type" id="DTN_4590">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="Q{1}[0-9]{3}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="safety_hazard_severity_code_Type" id="DTN_4600">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="safety_level_Type" id="DTN_4610">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="sampling_description_Type" id="DTN_4614">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="sampling_type_Type" id="DTN_4615">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="ratio"/>
+			<xsd:enumeration value="value"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="sampling_value_Type" id="DTN_4616">
+		<xsd:union>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:decimal">
+					<xsd:minInclusive value="0.0"/>
+					<xsd:maxInclusive value="1.0"/>
+					<xsd:fractionDigits value="2"/>
+					<!--Valid = e.g. 0,1, 0.00, 0.01, 0.99, 1.00, 1.0-->
+					<!--Invalid = e.g. 1.01-->
+				</xsd:restriction>
+			</xsd:simpleType>
+			<xsd:simpleType>
+				<xsd:restriction base="xsd:nonNegativeInteger">
+					<xsd:maxInclusive value="999"/>
+				</xsd:restriction>
+			</xsd:simpleType>
+		</xsd:union>
+	</xsd:simpleType>
+	<xsd:simpleType name="scheduled_maintenance_interval_Type" id="DTN_4625">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="9999999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="schedule_b_export_code_Type" id="DTN_4620">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="sea_deck_stowage_Type" id="DTN_4630">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="sectionalized_identification_Type" id="DTN_4640">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="sectionalized_item_transportation_indicator_Type" id="DTN_4650">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="security_classification_Type" id="DTN_4655">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="security_clearance_Type" id="DTN_4660">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="self_test_code_Type" id="DTN_4670">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="N"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="sensors_or_transducers_Type" id="DTN_4680">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="serial_number_effectivity_Type" id="DTN_4690">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="serial_number_usable_on_code_Type" id="DTN_4700">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="3"/>
+			<xsd:pattern value="[\p{Lu}\p{Nd}]*"/>
+			<!--\p{Lu} or \p{Uppercase_Letter}: an uppercase letter that has a lowercase variant-->
+			<!--\p{Nd} or \p{Decimal_Digit_Number}: a digit zero through nine in any script except ideographic scripts-->
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="service_designator_code_Type" id="DTN_4710">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="Y"/>
+			<xsd:enumeration value="T"/>
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="N"/>
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="X"/>
+			<xsd:enumeration value="J"/>
+			<xsd:enumeration value="O"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="shelf_life_action_code_Type" id="DTN_4720">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="shelf_life_Type" id="DTN_4730">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ship_distance_Type" id="DTN_4740">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="9999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="ship_time_Type" id="DTN_4750">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="shipping_configuration_Type" id="DTN_4760">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="CB"/>
+			<xsd:enumeration value="CM"/>
+			<xsd:enumeration value="CN"/>
+			<xsd:enumeration value="CR"/>
+			<xsd:enumeration value="CS"/>
+			<xsd:enumeration value="CT"/>
+			<xsd:enumeration value="CU"/>
+			<xsd:enumeration value="CY"/>
+			<xsd:enumeration value="DR"/>
+			<xsd:enumeration value="EC"/>
+			<xsd:enumeration value="ED"/>
+			<xsd:enumeration value="KE"/>
+			<xsd:enumeration value="LS"/>
+			<xsd:enumeration value="MW"/>
+			<xsd:enumeration value="MX"/>
+			<xsd:enumeration value="PT"/>
+			<xsd:enumeration value="EL"/>
+			<xsd:enumeration value="RT"/>
+			<xsd:enumeration value="SB"/>
+			<xsd:enumeration value="SD"/>
+			<xsd:enumeration value="VE"/>
+			<xsd:enumeration value="VO"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="shipping_weight_Type" id="DTN_4770">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="999.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="sketch_Type" id="DTN_4780">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="skid_area_Type" id="DTN_4790">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99999.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="skill_level_code_Type" id="DTN_4800">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="I"/>
+			<xsd:enumeration value="A"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="skill_specialty_code_Type" id="DTN_4810">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="9"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="skill_specialty_code_description_Type" id="DTN_4815">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="skill_specialty_evaluation_code_Type" id="DTN_4820">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="E"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="source_maintenance_recoverability_code_Type" id="DTN_4830">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="source_option_number_Type" id="DTN_4840">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="spare_factor_Type" id="DTN_4850">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="Q{1}[0-9]{0,3}|P{1}[0-9]{0,3}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="spares_acquisition_integrated_with_production_Type" id="DTN_4860">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="special_maintenance_item_code_Type" id="DTN_4870">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="G"/>
+			<xsd:enumeration value="H"/>
+			<xsd:enumeration value="J"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="special_management_code_Type" id="DTN_4880">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="T"/>
+			<xsd:enumeration value="P"/>
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="N"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="special_marking_code_Type" id="DTN_4890">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="special_material_content_code_Type" id="DTN_4900">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="special_packaging_instruction_number_revision_Type" id="DTN_4910">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="1"/>
+			<xsd:pattern value="\p{Lu}+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="special_packaging_instruction_number_Type" id="DTN_4920">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="speed_Type" id="DTN_4930">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="standard_interservice_agency_serial_control_number_Type" id="DTN_4940">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="7"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="standby_time_Type" id="DTN_4950">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="8784"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="substance_mass_Type" id="DTN_4952">
+		<xsd:restriction base="xsd:decimal"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="subtask_description_Type" id="DTN_4960">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="subtask_number_Type" id="DTN_4970">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="supersedure_type_Type" id="DTN_4980">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="supplemental_packaging_data_Type" id="DTN_4990">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="59"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="support_concept_Type" id="DTN_5000">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="F"/>
+			<xsd:enumeration value="G"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="support_equipment_full_item_name_Type" id="DTN_5010">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="42"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="support_equipment_grouping_Type" id="DTN_5020">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="support_equipment_recommendation_data_number_Type" id="DTN_5030">
+		<xsd:restriction base="xsd:string">
+			<xsd:length value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="support_equipment_recommendation_data_revision_remarks_Type" id="DTN_5040">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="support_equipment_recommendation_data_status_Type" id="DTN_5050">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="G"/>
+			<xsd:enumeration value="R"/>
+			<xsd:enumeration value="U"/>
+			<xsd:enumeration value="X"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="support_equipment_required_Type" id="DTN_5060">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="support_of_support_equipment_cost_factor_Type" id="DTN_5070">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="9.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="supression_indicator_Type" id="DTN_5080">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="systematic_name_Type" id="DTN_5101">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="system_end_item_identifier_Type" id="DTN_5090">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="N"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="system_equipment_quantity_per_test_Type" id="DTN_5100">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="task_associated_narrative_indicator_Type" id="DTN_5155">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="task_code_Type" id="DTN_5110">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="7"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="task_condition_Type" id="DTN_5120">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="task_criticality_code_Type" id="DTN_5130">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="task_description_Type" id="DTN_5157">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="task_frequency_Type" id="DTN_5140">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="999.9999"/>
+			<xsd:fractionDigits value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="task_identification_Type" id="DTN_5150">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="36"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="task_performance_standard_Type" id="DTN_5160">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="task_remarks_reference_code_Type" id="DTN_5170">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="task_remarks_Type" id="DTN_5180">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="240"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="task_sequence_number_Type" id="DTN_5190">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:maxInclusive value="9999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="task_subtask_associated_narrative_type_Type" id="DTN_5200">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="WARNING"/>
+			<xsd:enumeration value="CAUTION"/>
+			<xsd:enumeration value="NOTE"/>
+			<xsd:enumeration value="SPECIAL REQUIREMENT"/>
+			<xsd:enumeration value="DANGER"/>
+			<xsd:enumeration value="EXAMPLE"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="task_type_Type" id="DTN_5220">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="P"/>
+			<xsd:enumeration value="U"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="technical_evaluation_priority_code_Type" id="DTN_5230">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="technical_manual_change_number_Type" id="DTN_5240">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="technical_manual_code_Type" id="DTN_5250">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="3"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="technical_manual_description_Type" id="DTN_5255">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="technical_manual_functional_group_code_Type" id="DTN_5260">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="11"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="technical_manual_indenture_code_Type" id="DTN_5270">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:maxInclusive value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="technical_manual_number_Type" id="DTN_5280">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="30"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="technical_manual_required_code_Type" id="DTN_5290">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="17"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="test_language_Type" id="DTN_5300">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="test_measurement_and_diagnostic_equipment_register_code_Type" id="DTN_5310">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="E"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="test_measurement_and_diagnostic_equipment_register_index_number_Type" id="DTN_5320">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="7"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="test_points_Type" id="DTN_5330">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="test_program_instruction_technical_data_package_Type" id="DTN_5340">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="test_requirements_document_number_Type" id="DTN_5350">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="test_score_Type" id="DTN_5360">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="theater_of_operation_Type" id="DTN_5370">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="5"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="thumbnail_Type" id="DTN_5380">
+		<xsd:restriction base="xsd:base64Binary"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="tool_support_equipment_requirement_code_Type" id="DTN_5390">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="N"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="total_item_changes_Type" id="DTN_5400">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="total_quantity_recommended_Type" id="DTN_5410">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="total_systems_supported_Type" id="DTN_5420">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="towing_speed_Type" id="DTN_5430">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tracked_ground_pressure_Type" id="DTN_5440">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="9999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tracked_pad_shoe_area_Type" id="DTN_5450">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99999.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="tracked_pads_touching_Type" id="DTN_5460">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="training_cost_Type" id="DTN_5470">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99999.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="training_equipment_requirement_code_Type" id="DTN_5480">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="training_location_rationale_Type" id="DTN_5490">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[A-Z]{0,4}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="training_rationale_Type" id="DTN_5500">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[A-Z]{0,4}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="training_recommendation_type_Type" id="DTN_5510">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="J"/>
+			<xsd:enumeration value="N"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="transportation_character_mode_type_Type" id="DTN_5520">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="F"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="transportation_character_number_Type" id="DTN_5530">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="transportation_cost_Type" id="DTN_5540">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="999.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="transportation_end_item_indicator_Type" id="DTN_5550">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="transportation_indicator_Type" id="DTN_5560">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="S"/>
+			<xsd:enumeration value="E"/>
+			<xsd:enumeration value="B"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="transported_configuration_number_Type" id="DTN_5570">
+		<xsd:restriction base="xsd:positiveInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="type_acquisition_Type" id="DTN_5580">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="type_classfication_Type" id="DTN_5590">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="type_equipment_code_Type" id="DTN_5600">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="type_of_activity_Type" id="DTN_5610">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="15"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="type_of_change_code_Type" id="DTN_5620">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="D"/>
+			<xsd:enumeration value="G"/>
+			<xsd:enumeration value="L"/>
+			<xsd:enumeration value="M"/>
+			<xsd:enumeration value="Q"/>
+			<xsd:enumeration value="T"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="type_of_price_code_Type" id="DTN_5640">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="A"/>
+			<xsd:enumeration value="B"/>
+			<xsd:enumeration value="C"/>
+			<xsd:enumeration value="D"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="type_of_supply_system_code_Type" id="DTN_5650">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="N"/>
+			<xsd:enumeration value="V"/>
+			<xsd:enumeration value="X"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="unit_container_code_Type" id="DTN_5660">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="unit_container_level_Type" id="DTN_5670">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="unit_cost_Type" id="DTN_5680">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="unit_of_issue_conversion_factor_Type" id="DTN_5690">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="1.0"/>
+			<xsd:fractionDigits value="4"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="unit_of_issue_Type" id="DTN_5700">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="unit_of_measure_Type" id="DTN_5720">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="unit_under_test_explanation_data_Type" id="DTN_5730">
+		<xsd:restriction base="xsd:string"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="unit_under_test_fault_isolated_replaceable_unit_test_requirements_document_indicator_Type" id="DTN_5740">
+		<xsd:restriction base="xsd:boolean"/>
+	</xsd:simpleType>
+	<xsd:simpleType name="unit_under_test_parameter_operational_specification_code_Type" id="DTN_5750">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="O"/>
+			<xsd:enumeration value="S"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="unit_under_test_work_package_reference_Type" id="DTN_5760">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="6"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="unit_weight_Type" id="DTN_5770">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="9999000"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="usable_on_code_Type" id="DTN_5790">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="3"/>
+			<xsd:minLength value="1"/>
+			<xsd:pattern value="[\p{Lu}\p{Nd}]+"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="using_service_designator_code_Type" id="DTD_5800">
+		<xsd:restriction base="xsd:string">
+			<xsd:pattern value="[AFYTSNMXJO]{0,8}"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="utilization_ratio_Type" id="DTN_5810">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="9.99"/>
+			<xsd:fractionDigits value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="wearout_life_Type" id="DTN_5820">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="weight_Type" id="DTN_5830">
+		<xsd:restriction base="xsd:decimal">
+			<xsd:minInclusive value="0.0"/>
+			<xsd:maxInclusive value="99999.9"/>
+			<xsd:fractionDigits value="1"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="wheeled_inflation_pressure_Type" id="DTN_5840">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="999"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="wheeled_number_of_plies_Type" id="DTN_5850">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="wheeled_number_tires_Type" id="DTN_5860">
+		<xsd:restriction base="xsd:nonNegativeInteger">
+			<xsd:maxInclusive value="99"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="wheeled_tire_load_ratings_Type" id="DTN_5870">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="wheeled_tire_size_Type" id="DTN_5880">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="wheeled_weight_ratings_Type" id="DTN_5890">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="work_area_code_access_Type" id="DTN_5900">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="work_area_code_zone_Type" id="DTN_5910">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="10"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="work_unit_code_Type" id="DTN_5920">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="11"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="wrapping_material_Type" id="DTN_5930">
+		<xsd:restriction base="xsd:string">
+			<xsd:maxLength value="2"/>
+		</xsd:restriction>
+	</xsd:simpleType>
+	<xsd:simpleType name="year_Type" id="DTN_5940">
+		<xsd:restriction base="xsd:gYear"/>
+	</xsd:simpleType>
+</xsd:schema>

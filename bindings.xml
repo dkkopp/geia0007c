@@ -1,0 +1,8 @@
+<jaxb:bindings xmlns:xsi="http://www.w3.org/2001/XMLSchema"
+               xsi:schemaLocation="https://jakarta.ee/xml/ns/jaxb bindingschema_4_0.xsd"
+               xmlns:jaxb="https://jakarta.ee/xml/ns/jaxb"
+               version="3.0">
+
+  <jaxb:globalBindings generateElementProperty="false"/>
+
+</jaxb:bindings>

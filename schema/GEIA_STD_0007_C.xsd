@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2017 (http://www.altova.com) by jonathan.mayes1 (USAMC Logistics Support Activity) -->
+<!--
+Last Updated: 2019
+Author: SAE International
+Description:Base framework for XSD, imports the GEIA_STD_0007_LPD_C.xsd. Can be extended with additional data using extension schemas. See example import below.
+-->
+<xs:schema xmlns:base="http://www.sae.org/geia_std_0007/2018/RevC/schema" xmlns:lpd="http://www.sae.org/geia_std_0007/2018/RevC/lpd" xmlns:lsartypes="http://www.sae.org/geia_std_0007/2018/RevC/types" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:bom="http://www.sae.org/geia_std_0007/2018/RevC/bom" targetNamespace="http://www.sae.org/geia_std_0007/2018/RevC/schema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:import namespace="http://www.sae.org/geia_std_0007/2018/RevC/lpd" schemaLocation="GEIA_STD_0007_lpd_C.xsd"/>
+	<!--<xs:import namespace="http://www.sae.org/geia_std_0007/2018/RevC/bom" schemaLocation="bom_extension.xsd"/>-->
+	<!--The above is an example of importing an extension schema-->
+	<xs:element name="GEIA-STD-0007">
+		<xs:annotation>
+			<xs:documentation>This is the root element for GEIA-STD-0007 XML files.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element ref="lpd:lpd" minOccurs="0"/>
+				<xs:element ref="base:metadata" minOccurs="0"/>
+				<xs:element ref="base:extension" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="metadata">
+		<xs:annotation>
+			<xs:documentation>This element captures metadata that may be useful in describing the transaction. This may include sender/receiver, timestamps, project information, etc.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:any processContents="lax" minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:anyAttribute processContents="lax"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="extension">
+		<xs:annotation>
+			<xs:documentation>This element allows for the exchange of user defined data such as project, organization, and/or country specific data. These data must be agreed upon and defined by trading partners and coordinated with LPD software products as applicable for each particular project need.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence minOccurs="0">
+				<xs:any minOccurs="0" maxOccurs="unbounded"/>
+			</xs:sequence>
+			<xs:anyAttribute/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
