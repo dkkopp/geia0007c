@@ -1,3 +1,5 @@
 /target/
 /download/
 /nbproject/
+/build/
+/.gradle/
