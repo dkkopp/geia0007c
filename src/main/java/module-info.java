@@ -8,7 +8,7 @@ module com.clanmcpherson.geia0007c
 {
   requires transitive jakarta.xml.bind;
 
-  exports com.clanmchperson.geia0007c;
+  exports com.glamdringdefense.geia0007c;
 
-  opens com.clanmchperson.geia0007c to jakarta.xml.bind;
+  opens com.glamdringdefense.geia0007c to jakarta.xml.bind;
 }

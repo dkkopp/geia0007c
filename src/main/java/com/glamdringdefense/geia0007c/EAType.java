@@ -339,7 +339,7 @@ public class EAType {
      * Date Of First Article Delivery
      * 
      */
-    @XmlElement(name = "dat1stad", )
+    @XmlElement(name = "dat1stad")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar dat1Stad;
     /**

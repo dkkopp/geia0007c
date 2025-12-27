@@ -61,7 +61,7 @@ public class HMType {
      * Authorized Quantity
      * 
      */
-    @XmlElement(required = true, type = Integer.class, )
+    @XmlElement(required = true, type = Integer.class)
     @XmlSchemaType(name = "nonNegativeInteger")
     protected Integer authqty;
     /**

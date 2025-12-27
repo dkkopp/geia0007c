@@ -87,7 +87,7 @@ public class XCType {
      * System End Item Provisioning Contract Control Number
      * 
      */
-    @XmlElement(required = true, )
+    @XmlElement(required = true)
     protected String seipccn;
     /**
      * System End Item Provisioning List Item Sequence Number
@@ -124,7 +124,7 @@ public class XCType {
      * Usable On Code
      * 
      */
-    @XmlElement(required = true, )
+    @XmlElement(required = true)
     protected String uoc;
     /**
      * This element allows for the exchange of user defined data such as project, organization, and/or country specific data. These data must be agreed upon and defined by trading partners and coordinated with LPD software products as applicable for each particular project need.
